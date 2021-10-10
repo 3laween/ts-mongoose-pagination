@@ -38,13 +38,6 @@ declare module "mongoose" {
       callback?: (err: any, result: IPaginateResult<T>) => void
     ): Promise<IPaginateResult<T>>;
   }
-
-  export function model(
-    name: string,
-    schema?: Schema,
-    collection?: string,
-    skipInit?: boolean
-  ): any;
 }
 
 export * from "./mongoose-pagination/pagination";
