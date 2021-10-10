@@ -1,6 +1,5 @@
 import {
   IPagination,
-  IPaginateResult,
   IPaginateOptions,
   IPaginateDefaultOptions,
   Schema,
@@ -109,7 +108,7 @@ async function paginate(
     const count = await this.countDocuments(conditions).exec();
     const mongooseQuery = genMongooseQuery(this, conditions, options, count);
     const docs = await mongooseQuery.exec();
-    const result: IPaginateResult<any> = {
+    const result: any = {
       data: docs,
       pagination: genPagination(options, count)
     };

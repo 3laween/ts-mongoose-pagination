@@ -2,7 +2,7 @@ declare module "mongoose" {
   export interface IPaginateOptions {
     select?: Object | string;
     sort?: Object | string;
-    collation?: CollationOptions;
+    collation?: any;
     projection?: Object | string;
     populate?: Object[] | string[] | Object | string;
     lean?: boolean;
