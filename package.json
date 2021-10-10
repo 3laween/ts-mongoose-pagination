@@ -24,7 +24,7 @@
     "clean": "rm -rf dist",
     "build": "yarn clean && tsc",
     "test": "jest --config jestconfig.json src/tests",
-    "postinstall": "yarn build",
+    "postinstall": "cd ./node_modules/ts-mongoose-pagination && npm i && yarn build",
     "prepublishOnly": "yarn test && yarn build"
   },
   "dependencies": {
