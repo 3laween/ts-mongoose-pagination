@@ -44,7 +44,7 @@ declare module "mongoose" {
     schema?: Schema,
     collection?: string,
     skipInit?: boolean
-  ): PaginateModel<any>;
+  ): any;
 }
 
 export * from "./mongoose-pagination/pagination";
